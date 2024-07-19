@@ -6,10 +6,10 @@ export default function Meme(props) {
         src={`${props.img}`}
         alt=""
       />
-      <p className="absolute top-[15px] w-full text-center text-[30px] font-bold text-white">
+      <p className="text-outline-black absolute top-[15px] w-full text-center text-[30px] font-bold text-white">
         SHUT UP
       </p>
-      <p className="absolute bottom-[15px] w-full text-center text-[30px] font-bold text-white">
+      <p className="text-outline-black absolute bottom-[15px] w-full text-center text-[30px] font-bold text-white">
         AND TAKE MY MONEY
       </p>
     </div>
