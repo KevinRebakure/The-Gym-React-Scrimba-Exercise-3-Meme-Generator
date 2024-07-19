@@ -1,13 +1,15 @@
-export default function Meme() {
+export default function Meme(props) {
   return (
     <div className="relative h-[268px]">
       <img
         className="h-full w-full rounded-[2px] object-cover"
-        src="./memeimg.png"
+        src={`${props.img}`}
         alt=""
       />
-      <p className="text-[30px] absolute w-full text-center text-white font-bold top-[15px]">SHUT UP</p>
-      <p className="text-[30px] absolute w-full text-center text-white font-bold bottom-[15px]">
+      <p className="absolute top-[15px] w-full text-center text-[30px] font-bold text-white">
+        SHUT UP
+      </p>
+      <p className="absolute bottom-[15px] w-full text-center text-[30px] font-bold text-white">
         AND TAKE MY MONEY
       </p>
     </div>
