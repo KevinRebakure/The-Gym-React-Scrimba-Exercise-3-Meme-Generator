@@ -1,16 +1,21 @@
 import { useState } from "react";
 import Meme from "./Meme";
-import memesData from "../memesData";
+import { fetched, memesData } from "../memesData";
 
 export default function Form() {
   const [image, setImage] = useState("./memeimg.png");
+  const [arr, setArr] = useState([{ url: "./memeimg.png" }]);
   function submitted(e) {
     e.preventDefault();
-    memesData().then((data) => {
-      const arr = data.sort(() => Math.random() - 0.5);
-      console.log(arr);
+    if (!fetched) {
+      memesData().then((data) => {
+        setImage(data[0].url);
+        setArr(data.sort(() => Math.random() - 0.5));
+      });
+    } else {
+      setArr(arr.sort(() => Math.random() - 0.5));
       setImage(arr[0].url);
-    });
+    }
   }
 
   return (
