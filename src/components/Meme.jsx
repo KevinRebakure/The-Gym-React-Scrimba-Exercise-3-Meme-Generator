@@ -3,14 +3,14 @@ export default function Meme(props) {
     <div className="relative h-[268px]">
       <img
         className="h-full w-full rounded-[2px] object-cover"
-        src={`${props.img}`}
+        src={`${props.img.image}`}
         alt=""
       />
-      <p className="text-outline-black absolute top-[15px] w-full text-center text-[30px] font-bold text-white">
-        SHUT UP
+      <p className="overflow-clip text-outline-black absolute top-[15px] w-full text-center text-[30px] font-bold text-white">
+        {props.img.topText}
       </p>
-      <p className="text-outline-black absolute bottom-[15px] w-full text-center text-[30px] font-bold text-white">
-        AND TAKE MY MONEY
+      <p className="overflow-clip text-outline-black absolute bottom-[15px] w-full text-center text-[30px] font-bold text-white">
+        {props.img.bottomText}
       </p>
     </div>
   );
