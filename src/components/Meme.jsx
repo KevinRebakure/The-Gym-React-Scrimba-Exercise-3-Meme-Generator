@@ -7,10 +7,10 @@ export default function Meme(props) {
         alt=""
       />
       <p className="overflow-clip text-outline-black absolute top-[15px] w-full text-center text-[30px] font-bold text-white">
-        {props.img.topText}
+        {props.img.topText.toUpperCase()}
       </p>
       <p className="overflow-clip text-outline-black absolute bottom-[15px] w-full text-center text-[30px] font-bold text-white">
-        {props.img.bottomText}
+        {props.img.bottomText.toUpperCase()}
       </p>
     </div>
   );
