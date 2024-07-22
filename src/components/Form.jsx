@@ -13,6 +13,7 @@ export default function Form() {
   // let picture;
 
   useEffect(() => {
+    console.log("fetched");
     fetch("https://api.imgflip.com/get_memes")
       .then((res) => res.json())
       .then((data) => {
@@ -21,6 +22,7 @@ export default function Form() {
   }, []);
 
   function handleSubmit(event) {
+    console.log("submitted");
     event.preventDefault();
     const random = Math.floor(Math.random() * (picture.length - 0 + 1)) + 0;
     setImage((previous) => {
@@ -29,6 +31,7 @@ export default function Form() {
   }
 
   function handleChange(event) {
+    console.log("typed");
     const { name, value } = event.target;
     setImage((prev) => {
       return { ...prev, [name]: value };
